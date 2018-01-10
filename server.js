@@ -3,6 +3,7 @@ const hbs = require('hbs');
 let needle = require('needle');
 let app = express();
 const url = 'https://api.fixer.io/latest?base=USD';
+const port = process.env.PORT || 3000;
 let v;
 
 app.set('view engine', 'hbs');
@@ -17,8 +18,8 @@ app.get('/', (req, res) => {
     })
 });
 
-app.listen(3000, () => {
-    console.log('server up on port 3000');
+app.listen(port, () => {
+    console.log(`server up on port ${port}`);
 });
 
 

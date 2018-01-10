@@ -33,16 +33,16 @@
 let v = {{PLN}};
 let brut = document.getElementById('brutto').value;
 let usd = +brut/+v/1.23;
-document.getElementById('usd').innerHTML = 'USD  ' + usd;
-document.getElementById('netto').value = +brut/1.23;
+document.getElementById('usd').innerHTML = 'USD  ' + Math.round((+brut/+v/1.23)*100)/100;
+document.getElementById('netto').value = Math.round((+brut/1.23)*100)/100;
   }
 
   document.getElementById('netto').onchange = function() {
 let v = {{PLN}};
 let netto = document.getElementById('netto').value;
 let usd = +netto/+v;
-document.getElementById('usd').innerHTML = 'USD  ' + usd;
-document.getElementById('brutto').value = +netto*1.23;
+document.getElementById('usd').innerHTML = 'USD  ' + Math.round((usd)*100)/100;
+document.getElementById('brutto').value = Math.round((+netto*1.23)*100)/100;
   }
 </script>
 

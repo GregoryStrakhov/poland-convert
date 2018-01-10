@@ -1,17 +1,18 @@
 {
-  "name": "poland-convert",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "GS",
-  "license": "ISC",
-  "devDependencies": {
-    "express": "^4.16.2",
-    "hbs": "^4.0.1",
-    "needle": "^2.1.0"
-  },
-  "dependencies": {}
+    "name": "poland-convert",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "author": "GS",
+    "license": "ISC",
+    "devDependencies": {
+        "express": "^4.16.2",
+        "hbs": "^4.0.1",
+        "needle": "^2.1.0"
+    },
+    "dependencies": {}
 }
