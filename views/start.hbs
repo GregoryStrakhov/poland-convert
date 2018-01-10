@@ -4,15 +4,20 @@
     <meta charset="utf-8">
     <style>
         body {
-            margin-left: 5%;
+          width: 100px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-right: 100px;
+          padding-top: 80px;
+        }
+        .pln {
+         padding-left: 80px; 
+         white-space: nowrap; 
         }
     </style>
 </head>
 
-<body>
-    <br>
-    <div id="pln">1$ = {{PLN}} zł</div>
-    <br>
+<body >
     <label>
     Брутто  
     <br>
@@ -26,6 +31,8 @@
     </label>
     <br><br>
      <h3 id="usd">USD</h3>   
+     <br>
+     <div id="pln" class="pln">1$ = {{PLN}} zł</div>
 </body>
 
 <script>
