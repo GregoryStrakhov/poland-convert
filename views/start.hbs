@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin-left: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <h1 id="pln">Курс {{PLN}}</h1>
+    <br>
+    <label>
+    Брутто  
+    <br>
+    <input type="text" size="20" id="brutto"></input>
+    </label>
+    <br><br><br>
+    <label></label>
+    Нетто 
+     <br>   
+    <input type="text" size="20" id="netto"></input>
+    </label>
+    <br><br>
+     <h3 id="usd">USD</h3>   
+</body>
+
+<script>
+  document.getElementById('brutto').onchange = function() {
+let v = {{PLN}};
+let brut = document.getElementById('brutto').value;
+let usd = +brut/+v/1.23;
+document.getElementById('usd').innerHTML = 'USD  ' + usd;
+document.getElementById('netto').value = +brut/1.23;
+  }
+
+  document.getElementById('netto').onchange = function() {
+let v = {{PLN}};
+let netto = document.getElementById('netto').value;
+let usd = +netto/+v;
+document.getElementById('usd').innerHTML = 'USD  ' + usd;
+document.getElementById('brutto').value = +netto*1.23;
+  }
+</script>
+
